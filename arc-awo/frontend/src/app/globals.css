@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Arc-awo palette: trustworthy Nigerian fintech — deep green + warm gold */
+  --background: 150 30% 98%;
+  --foreground: 160 40% 8%;
+  --card: 0 0% 100%;
+  --card-foreground: 160 40% 8%;
+  --primary: 152 60% 24%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 150 25% 93%;
+  --secondary-foreground: 152 60% 18%;
+  --muted: 150 15% 93%;
+  --muted-foreground: 155 10% 40%;
+  --accent: 43 70% 88%;
+  --accent-foreground: 35 60% 22%;
+  --gold: 43 80% 52%;
+  --gold-foreground: 35 60% 15%;
+  --destructive: 0 72% 51%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 150 15% 86%;
+  --input: 150 15% 82%;
+  --ring: 152 60% 30%;
+  --radius: 0.75rem;
+}
+
+* {
+  border-color: hsl(var(--border));
+}
+
+body {
+  background: hsl(var(--background));
+  color: hsl(var(--foreground));
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Subtle green→cream gradient used on hero sections */
+.hero-gradient {
+  background:
+    radial-gradient(1200px 400px at 20% -10%, hsl(43 80% 88% / 0.7), transparent),
+    linear-gradient(180deg, hsl(152 45% 20%) 0%, hsl(152 55% 14%) 100%);
+}
+
+.card-hover {
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.card-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px -12px hsl(152 40% 20% / 0.18);
+}
